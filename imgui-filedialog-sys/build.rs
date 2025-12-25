@@ -19,8 +19,8 @@ fn assert_file_exists(path: &str) -> io::Result<()> {
 
 fn main() -> io::Result<()> {
     let manifest_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
-    // The library is in a nested submodule: ImGuiFileDialog/ImGuiFileDialog/
-    let igfd_path = Path::new(&manifest_dir).join("../third-party/ImGuiFileDialog/ImGuiFileDialog");
+    // Simplified submodule structure: third-party/ImGuiFileDialog/
+    let igfd_path = Path::new(&manifest_dir).join("../third-party/ImGuiFileDialog");
     let cpp_file = igfd_path.join("ImGuiFileDialog.cpp");
 
     assert_file_exists(cpp_file.to_str().unwrap())?;
