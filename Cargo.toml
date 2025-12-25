@@ -1,0 +1,3 @@
+[workspace]
+members = ["imgui-filedialog-sys", "imgui-filedialog"]
+resolver = "2"

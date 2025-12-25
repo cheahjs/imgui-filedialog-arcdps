@@ -1,0 +1,3 @@
+[submodule "third-party/ImGuiFileDialog"]
+	path = third-party/ImGuiFileDialog
+	url = https://github.com/aiekick/ImGuiFileDialog

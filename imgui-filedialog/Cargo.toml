@@ -1,0 +1,19 @@
+[package]
+name = "imgui-filedialog"
+version = "0.1.0"
+edition = "2021"
+description = "Safe Rust bindings to ImGuiFileDialog v0.5.4 for arcdps-imgui"
+license = "MIT"
+repository = "https://github.com/jscheah/imgui-filedialog-arcdps"
+keywords = ["imgui", "filedialog", "arcdps", "gui"]
+categories = ["gui"]
+
+[dependencies]
+imgui-filedialog-sys = { path = "../imgui-filedialog-sys" }
+arcdps-imgui = "0.8"
+libc = "0.2"
+
+[features]
+default = ["bookmark", "exploration_by_keys"]
+bookmark = ["imgui-filedialog-sys/bookmark"]
+exploration_by_keys = ["imgui-filedialog-sys/exploration_by_keys"]
